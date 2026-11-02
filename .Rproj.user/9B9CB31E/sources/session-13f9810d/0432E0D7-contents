@@ -1,0 +1,71 @@
+divided_difference <- function(x, y){
+  
+  n <- length(x)
+  
+  table <- matrix(
+    0,
+    nrow = n,
+    ncol = n
+  )
+  
+  table[, 1] <- y
+  
+  for(j in 2:n){
+    
+    for(i in 1:(n-j+1)) {
+      
+      table[i, j] <-
+        (table[i+1, j-1] -
+         table[i, j-1])/
+        (x[i+j-1] - x[i])
+    }
+  }
+  return(table)
+}
+
+
+x_data <- c(0, 1, 2, 3)
+y_data <- c(1, 2, 5, 10)
+
+divided_difference(
+  x_data,
+  y_data
+)
+
+lagrange(
+  x_data,
+  y_data,
+  x = 1.5
+)
+x_grid <- seq(
+  min(x_data),
+  max(x_data),
+  length.out = 300
+)
+
+y_grid <- sapply(
+  x_grid,
+  function(x) lagrange(x_data, y_data)
+)
+
+plot(
+  x_grid,
+  y_grid,
+  type = "1",
+  lwd = 2,
+  xlab = "x",
+  ylab = "p(x)",
+  main = "Interpolasi Polinomial Lagrange"
+)
+
+points(
+  x_data,
+  y_data,
+  pch = 19
+)
+
+points(
+  3,
+  lagrange(x_data, y_data)
+  pch = 19
+)

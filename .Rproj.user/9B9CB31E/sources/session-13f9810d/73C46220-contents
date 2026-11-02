@@ -1,0 +1,26 @@
+# Repository Metode Numerik (MTK0315)
+
+Repository ini berisi kumpulan kode R dan tugas-tugas praktikum untuk mata kuliah **Metode Numerik**.
+
+## Identitas Mahasiswa
+* **Nama:** [Nama Lengkap Anda]
+* **NIM:** [NIM Anda]
+* **Kelas:** [Kelas/Paralel Anda]
+* **Dosen Pengampu:** Dr. Indira Puteri Kinasih
+
+---
+  
+  ## Daftar Isi Praktikum
+  
+  | Pertemuan | Topik / Materi | File Script | Status |
+  | :--- | :--- | :--- | :--- |
+  | **Pertemuan 01** | Pengenalan R & Git | `pertemuan-01/intro.R` | Selesai |
+  | **Pertemuan 02** | Metode Akar Persamaan | `pertemuan-02/akar_persamaan.R` | Selesai |
+  | **Pertemuan 03** | Interpolasi Lagrange | `pertemuan-03/interpolasi.R` | Dalam Proses |
+  
+  ---
+  
+  ## Bahasa & Tools
+  * **Bahasa Pemrograman:** R
+* **IDE:** RStudio
+* **Version Control:** Git & GitHub Desktop
